@@ -10,7 +10,7 @@ $busca = new Search;
 
 <form action="index.php" method="get">
     
-    <label>Insira seu cep para consultar</label>
+    <label>Insira seu cep para consultar </label>
     <p>CEP : <input type="text" name="cep" /></p>
     <p><input type="submit" value="Conferir"/></p>
 </form>
