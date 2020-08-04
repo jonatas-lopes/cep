@@ -1,21 +1,27 @@
-<?php 
+<?php
 
 namespace ave\cep;
 
-class Search{
+use ave\cep\ws\ViaCep;
 
-    private $url = "https://viacep.com.br/ws/";
+class Search
+{
+    
 
-    public function getAdressFromZipCode(string $cep): array{
+    public function getAdressFromZipCode(string $cep): array
+    {
+        $cep = preg_replace('/[^0-9]/im', '', $cep);
 
-        $cep = preg_replace('/[^0-9]/im','',$cep);
-
-        $get = file_get_contents($this->url . $cep . "/json");
-
-        return (array) json_decode($get);
+         
+        return $this->getFromServer($cep);
     }
 
+    public function getFromServer(string $cep): array
+    {
 
+        $get = new ViaCep();
+         
 
-
+        return $get->get($cep);
+    }
 }

@@ -4,7 +4,7 @@ require_once "vendor/autoload.php";
 
 use ave\cep\Search;
 
-$busca = new Search; 
+$busca = new Search();
 
 ?>
 
@@ -17,6 +17,6 @@ $busca = new Search;
 
 <?php
        $resultado = $busca->getAdressFromZipCode($_GET['cep']);
-       print_r($resultado); 
-    ?>
+       print_r($resultado);
+?>
 

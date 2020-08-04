@@ -1,0 +1,11 @@
+Abra o terminal e use o comando 
+
+composer require --dev squizlabs/php_codesniffer 3.*
+
+para verificar oque esta do padrao da PSR escolhida, digite o comando 
+
+vendor/bin/phpcs  index.php --standard=PSR12
+
+caso queira deixar o Phpsniffer corrigir digite o comando
+
+vendor/bin/phpcbf  index.php --standard=PSR12

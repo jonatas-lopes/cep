@@ -1,0 +1,21 @@
+para dar inicio a um pacote composer digite
+
+composer init 
+
+Escolha o nome do seu vendor 
+
+ave/cep (por exemplo) 
+
+
+e finalize os proximos passos.
+
+Caso queira baixar um pacote para auxiliar seu projeto utilize o comando
+
+composer require vendor/name 
+
+e o mesmo será baixado para as dependencias do seu projeto. 
+
+
+Para testar seu codigo digite 
+
+vendor/bin/phpunit tests/
